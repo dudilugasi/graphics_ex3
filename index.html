@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animate.css" >
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <link rel="stylesheet" href="dat-gui-light-theme.css" >
+    <script src="numeric-1.2.6.min.js"></script>
+    <script src="data.js"></script>
+    <script src="engine.js"></script>
+
+    <style>
+
+        * {
+            margin:0;
+            padding:0;
+        }
+
+
+        body {
+            background-image: url(bg.png);
+            font-family: arial,sans-serif;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        div#help {
+            background-color: #E2DED9;
+            padding: 20px 50px;
+            max-width: 600px;
+            direction: rtl;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,0.67);
+            -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,0.67);
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.67);
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            margin-left: -300px;
+        }
+
+
+        i.fa {
+            cursor: pointer;
+        }
+
+        i.fa.fa-times {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+
+        i.fa.fa-question-circle {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        canvas#myCanvas {
+            margin: 0 auto;
+            display: block;
+            background-image: url(bg.png);
+        }
+
+        #help p {
+            padding-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<audio id="song">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+<canvas id="myCanvas" width="500" height="500">
+</canvas>
+
+<i class="fa fa-question-circle fa-3x fa-inverse"></i>
+<div id="help" class="hidden">
+    <i class="fa fa-times"></i>
+    <h1>תרגיל 3 בגרפיקה</h1>
+    <ul>
+        <li>כדי לשנות הטלה יש לבחור הטלה בprojection וללחוץ על draw</li>
+        <li>כדי לשנות זווית בהטלה אלכסונית יש לכוון את הזווית בחלון obliqueAngle</li>
+        <li>כדי לסלם יש לפתוח את תיבת scaling לבחור את ערך ההסילום וללחוץ על scale</li>
+        <li>כדי לסובב יש לפתוח את תיבת rotation, לבחור זווית סיבוב וללחוץ על ציר הסיבוב הרצוי. הצורות יסתובבו סביב ציר המרכז בציר הנבחר.</li>
+        <li>כדי להזיז יש לפתוח את תיבת translation, להכניס את ערכי x, y ,z וללחוץ על translate</li>
+    </ul>
+    <p>מגישים : דודי לוגסי, רותם מתתיתיהו, ראובן ג׳מי</p>
+</div>
+</body>
+</html>
